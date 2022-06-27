@@ -1,0 +1,90 @@
+.is-locked {
+  /* width: 100%;
+  height: 100%;
+  position: fixed; */
+  overflow: hidden;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+}
+
+.drawer {
+  position: fixed;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.drawer-overlay {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.drawer-nav {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 280px;
+}
+
+.nav {
+  overflow: auto;
+}
+
+.drawer {
+  transition-property: visibility;
+  transition-duration: 0.25s;
+}
+
+.drawer .drawer-overlay {
+  transition-property: opacity;
+  transition-duration: 0.25s;
+  transition-timing-function: linear;
+}
+
+.drawer .drawer-nav {
+  transition-property: transform;
+  transition-duration: 0.25s;
+  transition-timing-function: ease;
+}
+
+/* 開いているとき */
+.drawer.is-active {
+  visibility: visible;
+  /* ↓これがないとメニュー開いてすぐにバツボタンにフォーカスが移動しない */
+  transition-duration: 0s;
+}
+
+.drawer.is-active .drawer-overlay {
+  opacity: 1;
+}
+
+.drawer.is-active .drawer-nav {
+  transform: translateX(0);
+}
+
+/* 閉じているとき */
+.drawer {
+  visibility: hidden;
+}
+
+.drawer .drawer-overlay {
+  opacity: 0;
+}
+
+.drawer .drawer-nav {
+  transform: translateX(100%);
+}

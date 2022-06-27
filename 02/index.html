@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>drawer nav demo phase 1</title>
+  <link rel="stylesheet" href="/css/common.css">
+  <link rel="stylesheet" href="/02/css/style.css">
+</head>
+<body>
+
+<header class="header">
+  <h1 class="header-logo">Logo</h1>
+  <button type="button" class="header-button js-openDrawer" aria-controls="drawer" aria-expanded="false">
+    <img src="/02/images/open.svg" class="header-button-image" alt="ナビゲーションを開く" width="24" height="18">
+  </button>
+</header>
+<div id="drawer" class="drawer js-drawer" aria-expanded="false">
+  <div class="drawer-overlay js-overlay"></div>
+  <nav class="drawer-nav nav">
+    <button type="button" class="nav-button js-closeDrawer" aria-controls="drawer" aria-expanded="false">
+      <img src="/02/images/close.svg" class="nav-button-image" alt="ナビゲーションを閉じる" width="18" height="18">
+    </button>
+    <ul class="nav-list">
+      <li class="nav-item">
+        <a href="#area01" class="nav-link">アイテム 1</a>
+      </li>
+      <li class="nav-item">
+        <a href="#area02" class="nav-link">アイテム 2</a>
+      </li>
+      <li class="nav-item">
+        <a href="#area03" class="nav-link">アイテム 3</a>
+      </li>
+      <li class="nav-item">
+        <a href="#area04" class="nav-link">アイテム 4</a>
+      </li>
+    </ul>
+  </nav>
+</div>
+<main class="main">
+  <section class="main-item content">
+    <h2 class="content-title">Section 1</h2>
+    <p class="content-text">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+    <ul class="content-list LinkList">
+      <li class="LinkList-item">
+        <a href="#" class="LinkList-link">Lorem ipsum</a>
+      </li>
+      <li class="LinkList-item">
+        <a href="#" class="LinkList-link">dolor sit amet</a>
+      </li>
+      <li class="LinkList-item">
+        <a href="#" class="LinkList-link">consectetur adipiscing elit</a>
+      </li>
+      <li class="LinkList-item">
+        <a href="#" class="LinkList-link">sed do eiusmod tempor</a>
+      </li>
+      <li class="LinkList-item">
+        <a href="#" class="LinkList-link">incididunt ut labore</a>
+      </li>
+      <li class="LinkList-item">
+        <a href="#" class="LinkList-link">et dolore magna aliqua</a>
+      </li>
+      <li class="LinkList-item">
+        <a href="#" class="LinkList-link">Ut enim ad minim veniam</a>
+      </li>
+      <li class="LinkList-item">
+        <a href="#" class="LinkList-link">quis nostrud</a>
+      </li>
+      <li class="LinkList-item">
+        <a href="#" class="LinkList-link">exercitation ullamco</a>
+      </li>
+      <li class="LinkList-item">
+        <a href="#" class="LinkList-link">laboris nisi ut aliquip</a>
+      </li>
+    </ul>
+    <p class="content-text">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+  </section>
+  <section class="main-item content">
+    <h2 class="content-title">Section 2</h2>
+    <form action="" class="content-form Form">
+      <p class="form-item">
+        <label for="name" class="form-label">名前</label>
+        <input type="text" id="name" class="form-inputText" placeholder="John Smith">
+      </p>
+      <p class="form-item">
+        <label for="email" class="form-label">メール</label>
+        <input type="email" id="email" class="form-inputText" placeholder="email@example.com">
+      </p>
+      <p class="form-item">
+        <label for="message" class="form-label">メッセージ</label>
+        <textarea id="message" class="form-textarea" placeholder="Hello."></textarea>
+      </p>
+      <p class="form-item">
+        <button type="submit" class="form-submit">Submit</button>
+      </p>
+    </form>
+  </section>
+  <section class="main-item content">
+    <h2 class="content-title">Section 3</h2>
+    <p class="content-text">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+  </section>
+</main>
+<footer class="footer">
+  <p class="footer-text">Footer text.</p>
+</footer>
+<script src="/02/js/script.js"></script>
+</body>
+</html>
