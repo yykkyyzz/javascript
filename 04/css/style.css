@@ -1,0 +1,188 @@
+.is-locked {
+  /* width: 100%;
+  height: 100%;
+  position: fixed; */
+  overflow: hidden;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+}
+
+.drawer {
+  position: fixed;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.drawer-overlay {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.drawer-nav {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 280px;
+}
+
+.nav {
+  overflow: auto;
+}
+
+.drawer {
+  transition-property: visibility;
+  transition-duration: 0.25s;
+}
+
+.drawer .drawer-overlay {
+  transition-property: opacity;
+  transition-duration: 0.25s;
+  transition-timing-function: linear;
+}
+
+.drawer .drawer-nav {
+  transition-property: transform;
+  transition-duration: 0.25s;
+  transition-timing-function: ease;
+}
+
+/* 開いているとき */
+.drawer.is-active {
+  visibility: visible;
+  /* ↓これがないとメニュー開いてすぐにバツボタンにフォーカスが移動しない */
+  transition-duration: 0s;
+}
+
+.drawer.is-active .drawer-overlay {
+  opacity: 1;
+}
+
+.drawer.is-active .drawer-nav {
+  transform: translateX(0);
+}
+
+/* 閉じているとき */
+.drawer {
+  visibility: hidden;
+}
+
+.drawer .drawer-overlay {
+  opacity: 0;
+}
+
+.drawer .drawer-nav {
+  transform: translateX(100%);
+}
+
+.loading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  visibility: visible;
+  opacity: 1;
+  transition-property: visibility, opacity;
+  transition-duration: 0.2s;
+  outline: none;
+}
+
+.loading.is-hide {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.loading-spinner {
+  position: relative;
+  border-width: 4px;
+  border-style: solid;
+  border-color: limegreen;
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+}
+
+.loading-spinner::before {
+  position: absolute;
+  top: -4px;
+  bottom: -4px;
+  left: 50%;
+  margin-left: -5px;
+  width: 10px;
+  background-color: white;
+  content: "";
+  transform-origin: center;
+  transform: rotate(0deg);
+  animation-name: loading-spinner-rotate;
+  animation-duration: 0.8s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes loading-spinner-rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-message {
+  margin-top: 1rem;
+}
+
+.gallery {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.gallery .gallery-item {
+  width: 25%;
+  padding: 10px;
+
+}
+.gallery .gallery-item .gallery-image {
+  width: 100%;
+
+  /* animation-name: view-image;
+  animation-duration: 1s;
+  animation-iteration-count: infinite; */
+
+}
+
+/* @keyframes view-image {
+  from {
+    transform: rotate(0deg);
+    opacity: 0;
+  }
+
+  to {
+    transform: rotate(360deg);
+    opacity: 1;
+  }
+} */
