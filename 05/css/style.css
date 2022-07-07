@@ -1,0 +1,124 @@
+html {
+  overflow-y: scroll;
+}
+
+body {
+  margin: 0;
+  background-color: ivory;
+  font-family: sans-serif;
+}
+
+.header {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.header-title {
+  margin: 0;
+  font-size: 2rem;
+  line-height: 1;
+  text-align: center;
+}
+
+.nav {
+}
+
+.nav-list {
+  display: flex;
+  justify-content: center;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  background-color: darkslategray;
+  list-style-type: none;
+}
+
+.nav-list.is-fixed {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+
+.nav-item {
+  border-width: 0 1px 0 0;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+.nav-item:first-child {
+  border-left-width: 1px;
+}
+
+.nav-link {
+  display: block;
+  position: relative;
+  z-index: 0;
+  padding: 1rem;
+  color: ivory;
+  text-decoration: none;
+}
+
+.nav-link::after {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  content: "";
+  opacity: 0;
+  transition-property: opacity;
+  transition-duration: 0.1s;
+  transition-timing-function: linear;
+}
+
+.nav-link:hover::after {
+  opacity: 1;
+}
+
+.sticky .nav {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+.content {
+  display: block; /* for IE */
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 20px;
+  padding-left: 20px;
+  max-width: 600px;
+}
+
+.content-section {
+}
+
+.content-title {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.content-text {
+  margin-top: 1rem;
+  text-align: justify;
+}
+
+.footer {
+  margin-top: 3rem;
+  padding: 3rem;
+  background-color: darkcyan;
+  font-size: 2rem;
+  text-align: center;
+  color: ivory;
+}
+
+/* 詳細度確認 */
+.sticky div#test span { color: green; }
+.sticky div span { color: blue; }
+.sticky span { color: red; }
+.sticky #test span { color: yellow; }
+.sticky .test-span { color: #000;}
+.sticky #test .test-span { color: #efefef; text-shadow: #000 1px 0 10px;}
